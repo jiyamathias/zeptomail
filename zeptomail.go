@@ -25,6 +25,8 @@ func New(httpClient *http.Client, token string, baseURL ...string) *Client {
 	var url string
 	if len(baseURL) > 0 {
 		url = baseURL[0]
+	} else {
+		url = "https://api.zeptomail.com/v1.1/"
 	}
 	return &Client{
 		BaseUrl: url,
